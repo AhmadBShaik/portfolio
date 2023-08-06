@@ -50,7 +50,7 @@ export const Hero = ({ homeRef }: { homeRef: React.MutableRefObject<HTMLElement 
           </div>
         </div>
         <div className="mt-3.5">
-          <a className="px-5 mt-5 rounded w-fit py-1.5 bg-teal-300 text-emerald-700 hover:bg-teal-200 cursor-pointer font-bold" title="Resume" download={true} href="/Ahmad-Resume.pdf">Resume</a>
+          <a className="px-5 mt-5 rounded w-fit py-1.5 bg-teal-300 text-emerald-700 hover:bg-teal-200 cursor-pointer font-bold" title="Resume" download={true} href="/Ahmad-Shaik.pdf">Resume/CV</a>
         </div>
       </div>
       <div className="px-5 xl:px-0 hidden sm:flex items-center space-x-5">
@@ -67,7 +67,7 @@ export const Hero = ({ homeRef }: { homeRef: React.MutableRefObject<HTMLElement 
             </a>
           </div>
           <div className="flex items-center cursor-pointer" >
-            <a className="px-5 rounded w-fit py-1.5 bg-emerald-700 hover:bg-emerald-800 text-teal-200 cursor-pointer font-bold" title="Resume" download={true} href="/Ahmad-Resume.pdf">Resume</a>
+            <a className="px-5 rounded w-fit py-1.5 bg-emerald-700 hover:bg-emerald-800 text-teal-200 cursor-pointer font-bold" title="Resume" download={true} href="/Ahmad-Shaik.pdf">Resume/CV</a>
           </div>
         </div>
       </div>

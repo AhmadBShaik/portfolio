@@ -23,7 +23,7 @@ export const Skills = ({ skillsRef }: { skillsRef: React.MutableRefObject<HTMLEl
 
 	const expertise = [
 		{ name: 'Next.js', image: '/next.png' },
-		{ name: 'Postgresql', image: '/postgresql.png' },
+		{ name: 'PostgreSQL', image: '/postgresql.png' },
 		{ name: 'MongoDB', image: '/mongodb.png' },
 		{ name: 'Redux Tool Kit', image: '/redux.png' },
 	]
