@@ -23,8 +23,8 @@ export const Contact = ({ contactRef }: { contactRef: React.MutableRefObject<HTM
     resolver: zodResolver(contactFormData),
   });
 
-
   const [loading, setLoading] = useState<boolean>(false)
+  const [emailSent, setEmailSent] = useState<boolean>(false)
 
   const sendEmail = async (data: ContactFormData) => {
     console.log(data)
@@ -33,6 +33,7 @@ export const Contact = ({ contactRef }: { contactRef: React.MutableRefObject<HTM
       const emailResponse = await axios.post(`/api/send-email`, data);
       console.log(emailResponse)
       reset()
+      setEmailSent(true)
     }
     catch (e) {
       console.log(e)
@@ -47,8 +48,8 @@ export const Contact = ({ contactRef }: { contactRef: React.MutableRefObject<HTM
     ref={contactRef}
     id="contact">
     <div className="my-5 text-xl font-bold">Contact Me!</div>
-    <div>
-      <form action="" className="border space-y-5 p-5 max-w-2xl" onSubmit={handleSubmit(sendEmail)}>
+    {!emailSent ? (<div>
+      <form action="" className="border space-y-5 p-5 max-w-2xl shadow-lg rounded" onSubmit={handleSubmit(sendEmail)}>
         <div>
           <input type="text" placeholder="Name" id="name" className={`w-full p-2.5 rounded outline-none border ${!!errors?.name ? "border-red-500" : "border-emerald-500"} focus:border-2`}
             {...register("name")}
@@ -73,5 +74,12 @@ export const Contact = ({ contactRef }: { contactRef: React.MutableRefObject<HTM
         <input type="submit" className={`w-full p-2.5 rounded text-white font-bold ${loading ? "bg-emerald-300 cursor-not-allowed" : "bg-emerald-500 hover:bg-emerald-700 cursor-pointer"}`} disabled={loading} />
       </form>
     </div>
+    ) : (<div className="h-72 border max-w-2xl rounded bg-emerald-50 flex items-center justify-center border-emerald-500 shadow-lg">
+      <div className="text-emerald-700 text-center mb-0.5">
+        <div className="font-bold">Thank You for Contacting Me!</div>
+        <div>I will respond as soon as possible.</div>
+      </div>
+    </div>
+    )}
   </section>
 }

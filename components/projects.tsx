@@ -8,24 +8,44 @@ export const Projects = ({ projectsRef }: { projectsRef: React.MutableRefObject<
       viewLive: "https://ahmadbshaik.github.io/happy-travel/",
     },
     {
-      title: "Ethereum unit converter",
+      title: "My portfolio",
       description:
-        "The converter which is used to convert ethereum units. Converter which contains simple and extended sections.",
-      sourceCode: "https://github.com/AhmadBShaik/EthereumUnitConverter",
-      viewLive: "https://ahmadbshaik.github.io/ethereum-unit-converter/",
+        "This portfolio is created by me, using Next.js, React.js and Tailwind.css inspired by serveral curated portfolios by emma bostian https://github.com/emmabostian/developer-portfolios",
+      sourceCode: "https://github.com/AhmadBShaik/portfolio/",
+      viewLive: "https://ahmad-portfolio-nine.vercel.app/",
     },
     {
-      title: "QR-Code Generator",
+      title: "Ethereum unit converter",
       description:
-        "The QR-Code Generator generates multiple Quick Response(QR) Codes and allows user to download all QR Codes as PNG.",
-      sourceCode: "https://github.com/AhmadBShaik/qr-code-generator",
-      viewLive: "https://ahmadbshaik.github.io/qr-code-generator/",
+        "The converter which is used to convert ethereum units. Converter which contains simple and extended sections. This application is created from scratch without any dependent library. Used string manipulation for managing large numbers.",
+      sourceCode: "https://github.com/AhmadBShaik/EthereumUnitConverter",
+      viewLive: "https://ahmadbshaik.github.io/ethereum-unit-converter/"
     },
     {
       title: "Task Manager with Blockchain",
       description:
-        "Stores user specific tasks in local node. Every actions is stored as transaction in Ganache.",
+        "Stores user specific tasks in local node. Every actions is stored as transactions in Ganache. Used Web3 for connecting local blockchain node to React Application",
       sourceCode: "https://github.com/AhmadBShaik/todo-app-using-blockchain",
+    },
+    {
+      title: "QR-Code Generator",
+      description:
+        "The QR-Code Generator generates multiple Quick Response(QR) Codes and allows user to download all QR Codes as PNG. It have base url + ?source= + relative address",
+      sourceCode: "https://github.com/AhmadBShaik/qr-code-generator",
+      viewLive: "https://ahmadbshaik.github.io/qr-code-generator/",
+    },
+    {
+      title: "Id Card Generator",
+      description:
+        "Store students data in SQLite database and creates pdf by formatting data to look like ID Card, and let's users to print the pdf.I have used Flask, Jinja 2 templates, and SQLite database in this project.",
+      sourceCode: "https://github.com/AhmadBShaik/IdCardGenerator",
+    },
+    {
+      title: "Stay Inspired",
+      description:
+        "Display new quotations for daily inspiration and motivation. We can get quotations based on categories.",
+      sourceCode: "https://github.com/AhmadBShaik/StayInspired",
+      viewLive: "https://ahmadbshaik.github.io/stay-inspired/",
     },
   ];
   return <section
@@ -44,7 +64,7 @@ export const Projects = ({ projectsRef }: { projectsRef: React.MutableRefObject<
           <p className="flex-1 mt-2.5">{project.description}</p>
           <div className="flex justify-between mt-2.5">
             <div
-              className="text-green-800 bg-white px-2 py-1 rounded cursor-pointer border border-green-800"
+              className="text-emerald-500 hover:text-emerald-700 bg-white hover:bg-emerald-50 px-2 py-1 rounded cursor-pointer border border-emerald-500 hover:border-emerald-700"
               onClick={() => {
                 window.open(project.sourceCode, "_blank");
               }}>
@@ -52,7 +72,7 @@ export const Projects = ({ projectsRef }: { projectsRef: React.MutableRefObject<
             </div>
             {project.viewLive ? (
               <div
-                className="bg-green-800 text-white px-2 py-1 rounded cursor-pointer"
+                className="bg-emerald-500 hover:bg-emerald-700 text-white px-2 py-1 rounded cursor-pointer"
                 onClick={() => {
                   window.open(project.viewLive, "_blank");
                 }}>

@@ -25,7 +25,6 @@ const Header = () => {
     const handler = setInterval(() => {
       if (sectionName === "") {
         setRotationMultiplier(prev => prev + 120);
-        console.log(rotationMultiplier)
       }
     }, 2500);
     return () => clearInterval(handler);
