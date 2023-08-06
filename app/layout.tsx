@@ -1,6 +1,10 @@
+import Header from "@/components/header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Footer from "@/components/footer";
+import { SectionContextProvider } from "@/context/sectionContext";
+import { RotationMultiplierContextProvider } from "@/context/rotationContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,17 +20,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`flex min-h-screen flex-col bg-emerald-50 ${inter.className}`}
-      >
-        <header className="w-full h-16 sm:h-20 fixed text-emerald-500 font-bold bg-transparent border-b border-emerald-200 text-xl sm:text-2xl xl:text-3xl backdrop-blur-2xl">
-          <div className="flex h-16 sm:h-20 items-center px-5 xl:px-0 max-w-6xl mx-auto">HEADER</div>
-        </header>
-        <main className="flex-1 mt-16 sm:mt-20">{children}</main>
-        <footer className="h-16 flex items-center justify-center text-white bg-emerald-500 text-sm">
-          footer
-        </footer>
-      </body>
+      <SectionContextProvider>
+        <RotationMultiplierContextProvider>
+          <body className={`min-h-screen flex flex-col ${inter.className}`}>
+            <Header />
+            <main className="flex-1 mt-16 sm:mt-20">{children}</main>
+            <Footer />
+          </body>
+        </RotationMultiplierContextProvider>
+      </SectionContextProvider>
     </html>
   );
 }

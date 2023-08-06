@@ -1,0 +1,6 @@
+POST http://localhost:3000/api/send-email
+Content-Type: application/json
+
+{
+  "html":"<p>Hey Ahmad, I am Recruiter. Can you give some dates to talk about your previous experience?</p>"
+}
