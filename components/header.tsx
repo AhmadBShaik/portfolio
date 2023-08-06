@@ -76,7 +76,7 @@ const Header = () => {
                 className={`${sectionName === "" ? "text-white hover:text-emerald-100" : "hover:text-emerald-800 "
                   } text-xl sm:text-2xl xl:text-3xl cursor-pointer`}
               >
-                AhmadBShaik
+                Ahmad B Shaik
               </span>
             </Link>
             <span
