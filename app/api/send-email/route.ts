@@ -20,8 +20,10 @@ export async function POST(req: Request) {
       to: process.env.MY_EMAIL,
       subject: process.env.EMAIL_SUBJECT,
       html: `<div>
-      <p>Name: ${name}</p>
-      <p>Name: ${email}</p>
+      <div>From<div>
+      <p>${name}</p>
+      <p>${email}</p>
+      <br/>
       <p>${contactMessage}</p>
     </div>`,
     };
