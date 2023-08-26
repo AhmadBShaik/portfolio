@@ -113,7 +113,7 @@ export const Hero = ({
                 className="px-5 rounded w-fit py-1.5 bg-emerald-700 hover:bg-emerald-800 text-teal-200 cursor-pointer font-bold"
                 title="Resume"
                 download={true}
-                href="/Ahmad-Shaik.pdf">
+                href="/Ahmad-Shaik-Resume.pdf">
                 Resume/CV
               </a>
             </div>
