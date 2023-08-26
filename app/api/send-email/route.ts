@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { NextResponse } from "next/server"
+import nodemailer from "nodemailer"
 
 const config = {
   service: "gmail",
@@ -7,13 +7,13 @@ const config = {
     user: process.env.EMAIL_ADDRESS,
     pass: process.env.EMAIL_PASSWORD,
   },
-};
+}
 
 export async function POST(req: Request) {
-  const { name, email, message: contactMessage } = await req.json();
+  const { name, email, message: contactMessage } = await req.json()
 
   try {
-    const transporter = nodemailer.createTransport(config);
+    const transporter = nodemailer.createTransport(config)
 
     let message = {
       from: process.env.EMAIL_ADDRESS,
@@ -26,13 +26,13 @@ export async function POST(req: Request) {
       <br/>
       <p>${contactMessage}</p>
     </div>`,
-    };
+    }
 
-    const transporterResponse = await transporter.sendMail(message);
-    console.log(transporterResponse);
+    const transporterResponse = await transporter.sendMail(message)
+    console.log(transporterResponse)
 
-    return NextResponse.json({ message: "email sent!" });
+    return NextResponse.json({ message: "email sent!" })
   } catch (e) {
-    return NextResponse.json({ error: e });
+    return NextResponse.json({ error: e })
   }
 }

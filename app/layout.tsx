@@ -1,22 +1,22 @@
-import Header from "@/components/header";
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Footer from "@/components/footer";
-import { SectionContextProvider } from "@/context/sectionContext";
-import { RotationMultiplierContextProvider } from "@/context/rotationContext";
+import Header from "@/components/header"
+import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import Footer from "@/components/footer"
+import { SectionContextProvider } from "@/context/sectionContext"
+import { RotationMultiplierContextProvider } from "@/context/rotationContext"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Ahmad B Shaik Portfolio",
   description: "Ahmad's personal portfolio website",
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -30,5 +30,5 @@ export default function RootLayout({
         </RotationMultiplierContextProvider>
       </SectionContextProvider>
     </html>
-  );
+  )
 }
