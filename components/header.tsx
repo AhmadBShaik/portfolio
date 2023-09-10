@@ -53,7 +53,7 @@ const Header = () => {
       className={`w-full ${isOpen ? "h-screen" : "h-16"} ${
         sectionName !== "" ? "border-b border-emerald-700 bg-white" : ""
       } sm:h-20 fixed text-emerald-700 backdrop-blur-md z-20`}>
-      <div className="flex h-16 sm:h-20 items-center px-5 xl:px-0 max-w-7xl mx-auto font-bold justify-between">
+      <div className="flex h-16 sm:h-20 items-center px-5 2xl:px-0 max-w-7xl mx-auto font-bold justify-between">
         <div className="flex items-end">
           <span
             className={`${
@@ -117,7 +117,7 @@ const Header = () => {
         {isOpen ? (
           <div className="absolute top-0 left-0 bottom-0 right-0 md:hidden bg-emerald-700 backdrop-blur-2xl z-100">
             <div className="h-screen flex flex-col bg-emerald-700">
-              <div className="flex h-16 sm:h-20 items-center px-5 xl:px-0 max-w-6xl mx-auto font-bold  w-full justify-end">
+              <div className="flex h-16 sm:h-20 items-center px-5 2xl:px-0 max-w-6xl mx-auto font-bold  w-full justify-end">
                 <div className="md:hidden cursor-pointer">
                   <Image
                     src={isOpen ? "/x.svg" : "/menu.svg"}

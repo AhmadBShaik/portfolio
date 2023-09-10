@@ -23,7 +23,7 @@ export const Hero = ({
       ref={homeRef}
       id="hero">
       <div className="flex-1 max-w-7xl mx-auto">
-        <div className="flex flex-col px-5 xl:px-0">
+        <div className="flex flex-col px-5 2xl:px-0">
           <div className="sm:w-1/6"></div>
           <div className="sm:w-5/6">
             <div className="font-bold text-white text-2xl md:text-4xl">
@@ -43,7 +43,7 @@ export const Hero = ({
             </span>
           </div>
         </div>
-        <div className="px-5 xl:px-0 sm:hidden">
+        <div className="px-5 2xl:px-0 sm:hidden">
           <div className="px-5 flex mt-5 space-x-5 bg-teal-50 bg-opacity-50 rounded w-fit py-1.5">
             <div className="flex items-center cursor-pointer">
               <a
@@ -81,7 +81,7 @@ export const Hero = ({
             </a>
           </div>
         </div>
-        <div className="px-5 xl:px-0 hidden sm:flex items-center space-x-5">
+        <div className="px-5 2xl:px-0 hidden sm:flex items-center space-x-5">
           <div className="px-5 flex mt-5 space-x-5 bg-teal-50 bg-opacity-50 rounded w-fit py-2.5">
             <div className="flex items-center cursor-pointer">
               <a
