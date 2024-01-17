@@ -1,18 +1,18 @@
-import { useSectionContext } from "@/context/sectionContext"
-import { useTypewriter, Cursor } from "react-simple-typewriter"
-import Image from "next/image"
+import { useSectionContext } from "@/context/sectionContext";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import Image from "next/image";
 
 export const Hero = ({
   homeRef,
 }: {
-  homeRef: React.MutableRefObject<HTMLElement | null>
+  homeRef: React.MutableRefObject<HTMLElement | null>;
 }) => {
-  const { sectionName } = useSectionContext()
+  const { sectionName } = useSectionContext();
 
   const [text, _] = useTypewriter({
     words: ["TypeScript.", "React.js.", "Next.js.", "Tailwind.css."],
     loop: false,
-  })
+  });
   return (
     <section
       className={`w-full h-screen -mt-16 sm:-mt-20 flex items-center ${
@@ -21,7 +21,8 @@ export const Hero = ({
           : "bg-gradient-to-br from-emerald-600 from-20% via-emerald-700 via-50% to-emerald-800 to-90%"
       }`}
       ref={homeRef}
-      id="hero">
+      id="hero"
+    >
       <div className="flex-1 max-w-7xl mx-auto">
         <div className="flex flex-col px-5 2xl:px-0">
           <div className="sm:w-1/6"></div>
@@ -48,7 +49,8 @@ export const Hero = ({
             <div className="flex items-center cursor-pointer">
               <a
                 href="https://www.linkedin.com/in/ahmadbshaik/"
-                target="_blank">
+                target="_blank"
+              >
                 <Image
                   src={"/linkedin.png"}
                   alt="LinkedIn"
@@ -58,7 +60,6 @@ export const Hero = ({
                 />
               </a>
             </div>
-            {/* <div className="flex items-center cursor-pointer"><Image src={"/gmail.png"} alt="Gmail" width={42} height={42} title="Email" /></div> */}
             <div className="flex items-center cursor-pointer">
               <a href="https://github.com/ahmadbshaik" target="_blank">
                 <Image
@@ -70,13 +71,25 @@ export const Hero = ({
                 />
               </a>
             </div>
+            <div className="flex items-center cursor-pointer">
+              <a href="mailto:ahmadbshaik@outlook.com" target="_blank">
+                <Image
+                  src={"/outlook.png"}
+                  alt="Email"
+                  width={36}
+                  height={36}
+                  title="Email"
+                />
+              </a>
+            </div>
           </div>
           <div className="mt-3.5">
             <a
               className="px-5 mt-5 rounded w-fit py-1.5 bg-teal-300 text-emerald-700 hover:bg-teal-200 cursor-pointer font-bold"
               title="Resume"
               download={true}
-              href="/Ahmad-Shaik-Resume.pdf">
+              href="/Ahmad-Shaik-Resume.pdf"
+            >
               Resume/CV
             </a>
           </div>
@@ -86,7 +99,8 @@ export const Hero = ({
             <div className="flex items-center cursor-pointer">
               <a
                 href="https://www.linkedin.com/in/ahmadbshaik/"
-                target="_blank">
+                target="_blank"
+              >
                 <Image
                   src={"/linkedin.png"}
                   alt="LinkedIn"
@@ -109,11 +123,23 @@ export const Hero = ({
               </a>
             </div>
             <div className="flex items-center cursor-pointer">
+              <a href="mailto:ahmadbshaik@outlook.com" target="_blank">
+                <Image
+                  src={"/outlook.png"}
+                  alt="GitHub"
+                  width={44}
+                  height={44}
+                  title="GitHub"
+                />
+              </a>
+            </div>
+            <div className="flex items-center cursor-pointer">
               <a
                 className="px-5 rounded w-fit py-1.5 bg-emerald-700 hover:bg-emerald-800 text-teal-200 cursor-pointer font-bold"
                 title="Resume"
                 download={true}
-                href="/Ahmad-Shaik-Resume.pdf">
+                href="/Ahmad-Shaik-Resume.pdf"
+              >
                 Resume/CV
               </a>
             </div>
@@ -121,5 +147,5 @@ export const Hero = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
