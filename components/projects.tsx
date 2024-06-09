@@ -1,11 +1,25 @@
-import { Link } from "react-scroll"
+import { Link } from "react-scroll";
 
 export const Projects = ({
   projectsRef,
 }: {
-  projectsRef: React.MutableRefObject<HTMLElement | null>
+  projectsRef: React.MutableRefObject<HTMLElement | null>;
 }) => {
   const projects = [
+    {
+      title: "Agriculture Website",
+      description:
+        "A Website for Agricultural form and crops raised in the form.",
+      sourceCode: "https://github.com/AhmadBShaik/agriculture",
+      viewLive: "https://agriculture-eosin.vercel.app/",
+    },
+    {
+      title: "Botanical Garden",
+      description:
+        "Botanical Garden is landing page for show casing the all plants and their updates",
+      sourceCode: "https://github.com/AhmadBShaik/botanical-garden",
+      viewLive: "https://botanical-garden-eight.vercel.app",
+    },
     {
       title: "Happy Travel",
       description:
@@ -22,30 +36,11 @@ export const Projects = ({
       noRedirect: true,
     },
     {
-      title: "Ethereum unit converter",
-      description:
-        "The converter which is used to convert ethereum units. Converter which contains simple and extended sections. This application is created from scratch without any dependent library. Used string manipulation for managing large numbers.",
-      sourceCode: "https://github.com/AhmadBShaik/EthereumUnitConverter",
-      viewLive: "https://ahmadbshaik.github.io/ethereum-unit-converter/",
-    },
-    {
-      title: "Task Manager with Blockchain",
-      description:
-        "Stores user specific tasks in local node. Every actions is stored as transactions in Ganache. Used Web3 for connecting local blockchain node to React Application",
-      sourceCode: "https://github.com/AhmadBShaik/todo-app-using-blockchain",
-    },
-    {
       title: "QR-Code Generator",
       description:
         "The QR-Code Generator generates multiple Quick Response(QR) Codes and allows user to download all QR Codes as PNG. It have base url + ?source= + relative address",
       sourceCode: "https://github.com/AhmadBShaik/qr-code-generator",
       viewLive: "https://ahmadbshaik.github.io/qr-code-generator/",
-    },
-    {
-      title: "Id Card Generator",
-      description:
-        "Store students data in SQLite database and creates pdf by formatting data to look like ID Card, and let's users to print the pdf.I have used Flask, Jinja 2 templates, and SQLite database in this project.",
-      sourceCode: "https://github.com/AhmadBShaik/IdCardGenerator",
     },
     {
       title: "Stay Inspired",
@@ -54,7 +49,7 @@ export const Projects = ({
       sourceCode: "https://github.com/AhmadBShaik/StayInspired",
       viewLive: "https://ahmadbshaik.github.io/stay-inspired/",
     },
-  ]
+  ];
   return (
     <section
       className="w-full max-w-7xl mx-auto p-5 min-h-[calc(100vh-64px)] sm:min-h-[calc(100vh-80px)]"
@@ -72,7 +67,7 @@ export const Projects = ({
               <div
                 className="text-emerald-500 hover:text-emerald-700 bg-white hover:bg-emerald-50 px-2 py-1 rounded cursor-pointer border border-emerald-500 hover:border-emerald-700"
                 onClick={() => {
-                  window.open(project.sourceCode, "_blank")
+                  window.open(project.sourceCode, "_blank");
                 }}>
                 Source Code
               </div>
@@ -92,7 +87,7 @@ export const Projects = ({
                   <div
                     className="bg-emerald-500 hover:bg-emerald-700 text-white px-2 py-1 rounded cursor-pointer"
                     onClick={() => {
-                      window.open(project.viewLive, "_blank")
+                      window.open(project.viewLive, "_blank");
                     }}>
                     View Live
                   </div>
@@ -103,5 +98,5 @@ export const Projects = ({
         ))}
       </ul>
     </section>
-  )
-}
+  );
+};
