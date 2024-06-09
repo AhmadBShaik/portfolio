@@ -18,7 +18,7 @@ export const Projects = ({
       description:
         "Botanical Garden is landing page for show casing the all plants and their updates",
       sourceCode: "https://github.com/AhmadBShaik/botanical-garden",
-      viewLive: "https://botanical-garden-eight.vercel.app",
+      viewLive: "https://botanical-garden-two.vercel.app",
     },
     {
       title: "Happy Travel",
