@@ -9,7 +9,7 @@ import { RotationMultiplierContextProvider } from "@/context/rotationContext"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Ahmad B Shaik Portfolio",
+  title: "Ahmad B Shaik | Portfolio",
   description: "Ahmad's personal portfolio website",
 }
 
