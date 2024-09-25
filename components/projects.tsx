@@ -7,6 +7,28 @@ export const Projects = ({
 }) => {
   const projects = [
     {
+      title: "Little Learners",
+      description:
+        "The School Website built with re-usable components using atomic design pattern leveraging Atomic Design Pattern.",
+      sourceCode: "https://github.com/ahmad-bsh/little-learners",
+      viewLive: "https://little-learners-ten.vercel.app",
+    },
+    {
+      title: "Agriculture Website",
+      description:
+        "The agriculture website with Home, About, Contact, Projects and Project detail(leveraging dynamic routing in Next.js) pages.",
+      sourceCode: "https://github.com/ahmad-bsh/agriculture",
+      viewLive: "https://agriculture-indol-five.vercel.app",
+    },
+    {
+      title: "My portfolio",
+      description:
+        "Clean and responsive portfolio built using Next.js, React.js and Tailwind.css with minimal animations.",
+      sourceCode: "https://github.com/AhmadBShaik/portfolio/",
+      viewLive: "#",
+      noRedirect: true,
+    },
+    {
       title: "Happy Travel",
       description:
         "Travel Website which have which let's users to discover travel locations, view latest photographs to know the current scenary.This website will also provides latest news about travel locations.",
@@ -14,45 +36,11 @@ export const Projects = ({
       viewLive: "https://ahmadbshaik.github.io/happy-travel/",
     },
     {
-      title: "My portfolio",
+      title: "Botanical Garden",
       description:
-        "This portfolio is created by me, using Next.js, React.js and Tailwind.css.",
-      sourceCode: "https://github.com/AhmadBShaik/portfolio/",
-      viewLive: "#",
-      noRedirect: true,
-    },
-    {
-      title: "Ethereum unit converter",
-      description:
-        "The converter which is used to convert ethereum units. Converter which contains simple and extended sections. This application is created from scratch without any dependent library. Used string manipulation for managing large numbers.",
-      sourceCode: "https://github.com/AhmadBShaik/EthereumUnitConverter",
-      viewLive: "https://ahmadbshaik.github.io/ethereum-unit-converter/",
-    },
-    {
-      title: "Task Manager with Blockchain",
-      description:
-        "Stores user specific tasks in local node. Every actions is stored as transactions in Ganache. Used Web3 for connecting local blockchain node to React Application",
-      sourceCode: "https://github.com/AhmadBShaik/todo-app-using-blockchain",
-    },
-    {
-      title: "QR-Code Generator",
-      description:
-        "The QR-Code Generator generates multiple Quick Response(QR) Codes and allows user to download all QR Codes as PNG. It have base url + ?source= + relative address",
-      sourceCode: "https://github.com/AhmadBShaik/qr-code-generator",
-      viewLive: "https://ahmadbshaik.github.io/qr-code-generator/",
-    },
-    {
-      title: "Id Card Generator",
-      description:
-        "Store students data in SQLite database and creates pdf by formatting data to look like ID Card, and let's users to print the pdf.I have used Flask, Jinja 2 templates, and SQLite database in this project.",
-      sourceCode: "https://github.com/AhmadBShaik/IdCardGenerator",
-    },
-    {
-      title: "Stay Inspired",
-      description:
-        "Display new quotations for daily inspiration and motivation. We can get quotations based on categories.",
-      sourceCode: "https://github.com/AhmadBShaik/StayInspired",
-      viewLive: "https://ahmadbshaik.github.io/stay-inspired/",
+        "Fully responsive static website with custom mobile menu built using tailwind utility classes.",
+      sourceCode: "https://github.com/ahmad-bsh/botanical-garden",
+      viewLive: "https://botanical-garden-plum.vercel.app/",
     },
   ]
   return (

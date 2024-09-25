@@ -15,11 +15,10 @@ export const Hero = ({
   });
   return (
     <section
-      className={`w-full h-screen -mt-16 sm:-mt-20 flex items-center ${
-        sectionName === "/Projects"
-          ? "bg-white"
-          : "bg-gradient-to-br from-emerald-600 from-20% via-emerald-700 via-50% to-emerald-800 to-90%"
-      }`}
+      className={`w-full h-screen -mt-16 sm:-mt-20 flex items-center ${sectionName === "/Projects"
+        ? "bg-white"
+        : "bg-gradient-to-br from-emerald-600 from-20% via-emerald-700 via-50% to-emerald-800 to-90%"
+        }`}
       ref={homeRef}
       id="hero"
     >
@@ -90,7 +89,7 @@ export const Hero = ({
               download={true}
               href="/Ahmad-Shaik-Resume.pdf"
             >
-              Resume/CV
+              Resume
             </a>
           </div>
         </div>
@@ -140,7 +139,7 @@ export const Hero = ({
                 download={true}
                 href="/Ahmad-Shaik-Resume.pdf"
               >
-                Resume/CV
+                Resume
               </a>
             </div>
           </div>
