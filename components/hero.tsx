@@ -86,8 +86,8 @@ export const Hero = ({
             <a
               className="px-5 mt-5 rounded w-fit py-1.5 bg-teal-300 text-emerald-700 hover:bg-teal-200 cursor-pointer font-bold"
               title="Resume"
-              download={true}
-              href="/Ahmad-Shaik-Resume.pdf"
+              href="https://drive.google.com/file/d/1pjTqLm5GdWwv4fyvU_66J7IPTEiGuxhb0ageShfkJEo/preview"
+              target="_blank"
             >
               Resume
             </a>
@@ -136,8 +136,8 @@ export const Hero = ({
               <a
                 className="px-5 rounded w-fit py-1.5 bg-emerald-700 hover:bg-emerald-800 text-teal-200 cursor-pointer font-bold"
                 title="Resume"
-                download={true}
-                href="/Ahmad-Shaik-Resume.pdf"
+                href="https://drive.google.com/file/d/1pjTqLm5GdWwv4fyvU_66J7IPTEiGuxhb0ageShfkJEo/preview"
+                target="_blank"
               >
                 Resume
               </a>
