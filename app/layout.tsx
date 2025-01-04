@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Ahmad Basha Shaik",
     "AhmadBShaik"
   ],
-  authors: [{ name: "Ahmad Basha Shaik", url: "https://ahmadbshaik.com" }],
+  authors: [{ name: "Ahmad Basha Shaik (AKA AhmadBShaik)", url: "https://ahmadbshaik.com" }],
   openGraph: {
     title: "Ahmad Basha Shaik | IT Professional",
     description:
