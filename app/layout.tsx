@@ -30,7 +30,12 @@ export const metadata: Metadata = {
     "TypeScript Specialist",
     "UI/UX Developer",
     "Responsive Web Design",
-    "Web Application Developer"
+    "Web Application Developer",
+    "Ahmad",
+    "Ahmad Shaik",
+    "Ahmad Basha",
+    "Ahmad Basha Shaik",
+    "AhmadBShaik"
   ],
   authors: [{ name: "Ahmad Basha Shaik", url: "https://ahmadbshaik.com" }],
   openGraph: {
