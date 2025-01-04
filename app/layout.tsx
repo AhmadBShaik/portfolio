@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 import Footer from "@/components/footer"
 import { SectionContextProvider } from "@/context/sectionContext"
 import { RotationMultiplierContextProvider } from "@/context/rotationContext"
+import Head from "next/head"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -64,6 +65,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <SectionContextProvider>
         <RotationMultiplierContextProvider>
           <body className={`min-h-screen flex flex-col ${inter.className}`}>
