@@ -28,7 +28,7 @@ const Footer = () => {
           />
         </span>
       </div>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row md:gap-1">
         <p className="text-center">
           Copyright © 2022 - 2025 AhmadBShaik.
         </p>
