@@ -28,9 +28,12 @@ const Footer = () => {
           />
         </span>
       </div>
-      <p>
-        Copyright © 2022 - 2025 AhmadBShaik. All rights reserved.
-      </p>
+      <div className="flex flex-col md:flex-row">
+        <p className="text-center">
+          Copyright © 2022 - 2025 AhmadBShaik.
+        </p>
+        <p className="text-center">All rights reserved.</p>
+      </div>
     </footer>
   )
 }
