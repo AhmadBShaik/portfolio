@@ -28,6 +28,9 @@ const Footer = () => {
           />
         </span>
       </div>
+      <p>
+        Copyright © 2022 - 2025 AhmadBShaik. All rights reserved.
+      </p>
     </footer>
   )
 }
