@@ -45,12 +45,12 @@ export const Contact = ({
   }
   return (
     <section
-      className="w-full max-w-7xl mx-auto p-5 min-h-[calc(100vh-64px-64px)] sm:min-h-[calc(100vh-80px-64px)]"
+      className="w-full max-w-7xl mx-auto p-5"
       ref={contactRef}
       id="contact">
-      <div className="my-5 text-xl font-bold">Contact Me!</div>
+      <h2 className="my-5 text-2xl md:text-3xl font-bold">Contact Me!</h2>
       {!emailSent ? (
-        <div>
+        <div className="relative">
           <form
             action=""
             className="border space-y-5 p-5 max-w-2xl shadow-lg rounded"
@@ -58,11 +58,10 @@ export const Contact = ({
             <div>
               <input
                 type="text"
-                placeholder="Name"
+                placeholder="What's your name? 😊"
                 id="name"
-                className={`w-full p-2.5 rounded outline-none border ${
-                  !!errors?.name ? "border-red-500" : "border-emerald-500"
-                } focus:border-2`}
+                className={`w-full text-sm md:text-base p-2.5 rounded outline-none border ${!!errors?.name ? "border-red-500" : "border-emerald-500"
+                  } focus:border-2`}
                 {...register("name")}
               />
               <div className="text-red-500 text-sm">
@@ -73,10 +72,9 @@ export const Contact = ({
             <div>
               <input
                 type="email"
-                placeholder="Email"
-                className={`w-full p-2.5 rounded outline-none border ${
-                  !!errors?.email ? "border-red-500" : "border-emerald-500"
-                } focus:border-2`}
+                placeholder="How can I reach you? 📧"
+                className={`w-full text-sm md:text-base p-2.5 rounded outline-none border ${!!errors?.email ? "border-red-500" : "border-emerald-500"
+                  } focus:border-2`}
                 {...register("email")}
               />
               <div className="text-red-500 text-sm">
@@ -86,10 +84,9 @@ export const Contact = ({
             <div>
               <textarea
                 id="message"
-                placeholder="Message"
-                className={`w-full p-2.5 rounded outline-none border ${
-                  !!errors?.message ? "border-red-500" : "border-emerald-500"
-                } focus:border-2`}
+                placeholder="Tell me what’s on your mind! 💬"
+                className={`w-full text-sm md:text-base p-2.5 rounded outline-none border ${!!errors?.message ? "border-red-500" : "border-emerald-500"
+                  } focus:border-2`}
                 rows={8}
                 {...register("message")}
               />
@@ -99,20 +96,22 @@ export const Contact = ({
             </div>
             <input
               type="submit"
-              className={`w-full p-2.5 rounded text-white font-bold ${
-                loading
-                  ? "bg-emerald-300 cursor-not-allowed"
-                  : "bg-emerald-500 hover:bg-emerald-700 cursor-pointer"
-              }`}
+              className={`w-full text-sm md:text-base p-2.5 rounded text-white font-bold ${loading
+                ? "bg-emerald-300 cursor-not-allowed"
+                : "bg-emerald-500 hover:bg-emerald-700 cursor-pointer"
+                }`}
               disabled={loading}
             />
           </form>
+          {loading ? <div className="absolute bg-white inset-0 max-w-2xl bg-opacity-75 border-emerald-500 shadow-lg rounded flex items-center justify-center">
+            <div className="font-bold text-emerald-700">Your message is on its way to me! 🚀</div>
+          </div> : null}
         </div>
       ) : (
         <div className="h-72 border max-w-2xl rounded bg-emerald-50 flex items-center justify-center border-emerald-500 shadow-lg">
-          <div className="text-emerald-700 text-center mb-0.5">
-            <div className="font-bold">Thank You for Contacting Me!</div>
-            <div>I will respond as soon as possible.</div>
+          <div className="text-emerald-700 text-center mb-0.5 text-sm md:text-base">
+            <div className="font-bold">Thank You for Reaching Out!</div>
+            <div>I'll get back to you as soon as possible.</div>
           </div>
         </div>
       )}

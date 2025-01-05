@@ -6,29 +6,27 @@ export const Skills = ({
   skillsRef: React.MutableRefObject<HTMLElement | null>
 }) => {
   const confidentWith = [
-    { name: "HTML", image: "/html.png" },
-    { name: "CSS", image: "/css.png" },
-    { name: "JavaScript", image: "/javascript.png" },
-    { name: "TypeScript", image: "/typescript.png" },
-    { name: "React.js", image: "/react.png" },
     { name: "Next.js", image: "/next.png" },
+    { name: "React.js", image: "/react.png" },
+    { name: "TypeScript", image: "/typescript.png" },
+    { name: "JavaScript", image: "/javascript.png" },
+    { name: "React Query", image: "/react-query.png" },
     { name: "Tailwind.css", image: "/tailwind.png" },
     { name: "Supabase", image: "/supabase.png" },
+    { name: "HTML", image: "/html.png" },
+    { name: "CSS", image: "/css.png" },
+    { name: "Python", image: "/python.png" },
   ]
 
   const usedInPast = [
-    { name: "Python", image: "/python.png" },
     { name: "Flask", image: "/flask.png" },
-    { name: "Solidity", image: "/solidity.png" },
+    { name: "PostgreSQL", image: "/postgresql.png" },
+    { name: "Supabase", image: "/supabase.png" },
   ]
 
   const expertise = [
-    { name: "TypeScript", image: "/typescript.png" },
-    { name: "React.js", image: "/react.png" },
-    { name: "Next.js", image: "/next.png" },
     { name: "PostgreSQL", image: "/postgresql.png" },
     { name: "MongoDB", image: "/mongodb.png" },
-    { name: "React Query", image: "/react-query.png" },
     { name: "Zustand", image: "/zustand.png" },
     { name: "Redux Tool Kit", image: "/redux.png" },
     { name: "Jest", image: "/jest.png" },
@@ -37,13 +35,13 @@ export const Skills = ({
 
   return (
     <section
-      className="w-full max-w-7xl mx-auto p-5 min-h-[calc(100vh-64px)] sm:min-h-[calc(100vh-80px)]"
+      className="w-full max-w-7xl mx-auto p-5"
       ref={skillsRef}
       id="skills">
-      <div className="my-5 text-xl font-bold">Skills</div>
+      <h2 className="my-5 text-2xl md:text-3xl font-bold">Skills</h2>
 
-      <div className="mt-5 mb-5 text-lg font-bold">I am confident with</div>
-      <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3">
+      <div className="mt-5 mb-5 md:text-lg font-bold">I am confident with</div>
+      <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3 text-sm md:text-base">
         {confidentWith.map((item) => (
           <li key={item.name}>
             <div className="flex items-center space-x-1">
@@ -56,8 +54,8 @@ export const Skills = ({
         ))}
       </ul>
 
-      <div className="mt-10 mb-5 text-lg font-bold">I have used in past</div>
-      <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3">
+      <div className="mt-10 mb-5 md:text-lg font-bold">I have used in past</div>
+      <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3 text-sm md:text-base">
         {usedInPast.map((item) => (
           <li key={item.name}>
             <div className="flex items-center space-x-1">
@@ -70,10 +68,10 @@ export const Skills = ({
         ))}
       </ul>
 
-      <div className="mt-10 mb-5 text-lg font-bold">
+      <div className="mt-10 mb-5 md:text-lg font-bold">
         I want to learn/gain expertise in near future
       </div>
-      <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3">
+      <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3 text-sm md:text-base">
         {expertise.map((item) => (
           <li key={item.name}>
             <div className="flex items-center space-x-1">

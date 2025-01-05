@@ -5,12 +5,12 @@ export const AboutMe = ({
 }) => {
   return (
     <section
-      className="w-full max-w-7xl mx-auto p-5 min-h-[calc(100vh-64px)] sm:min-h-[calc(100vh-80px)]"
+      className="w-full max-w-7xl mx-auto p-5 text-sm md:text-base "
       ref={aboutRef}
       id="about"
     >
-      <div className="my-5 text-xl font-bold">About Me</div>
-      <div className="space-y-5">
+      <h2 className="my-5 text-2xl md:text-3xl font-bold">About Me</h2>
+      <div className="space-y-3 md:space-y-5">
         <p>
           I am a software developer with a background in Computer Science and
           Engineering.
@@ -26,7 +26,7 @@ export const AboutMe = ({
           to review my code and thriving to improve my code quality.
         </p>
 
-        <div className="md:hidden flex flex-col text-sm pt-10">
+        <div className="md:hidden flex flex-col text-sm pt-6">
           <div className="mb-5 text-lg font-medium">Timeline</div>
           <>
             <div className="flex">
@@ -114,8 +114,8 @@ export const AboutMe = ({
           </>
         </div>
 
-        <div className="hidden md:flex flex-col items-center md:text-md pt-16">
-          <div className="mb-10 text-lg font-medium">Timeline</div>
+        <div className="hidden md:flex flex-col items-center md:text-md md:pt-10">
+          <div className="mb-10 text-lg md:text-xl font-medium">Timeline</div>
 
           <>
             <div className="flex w-full items-center">
