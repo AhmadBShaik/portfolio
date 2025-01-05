@@ -30,11 +30,9 @@ export const Contact = ({
   const [emailSent, setEmailSent] = useState<boolean>(false)
 
   const sendEmail = async (data: ContactFormData) => {
-    console.log(data)
     try {
       setLoading(true)
       const emailResponse = await axios.post(`/api/send-email`, data)
-      console.log(emailResponse)
       reset()
       setEmailSent(true)
     } catch (e) {
