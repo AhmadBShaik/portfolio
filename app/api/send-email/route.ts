@@ -12,6 +12,11 @@ const config = {
 export async function POST(req: Request) {
   const { name, email, message: contactMessage } = await req.json()
   const allowedOrigins = ['https://ahmadbshaik.com', 'https://www.ahmadbshaik.com', 'https://ahmadbshaik.vercel.app', 'https://www.ahmadbshaik.vercel.app'];
+
+  if (process.env.NODE_ENV === "development") {
+    allowedOrigins.push('http://localhost:3000')
+  }
+
   const origin = req.headers.get('Origin') || ''; // Get the request's Origin header
   if (allowedOrigins.includes(origin)) {
     try {
