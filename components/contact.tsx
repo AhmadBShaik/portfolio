@@ -43,7 +43,7 @@ export const Contact = ({
   }
   return (
     <section
-      className="w-full max-w-7xl mx-auto p-5"
+      className="w-full max-w-7xl mx-auto p-5 mb-24 md:mb-32"
       ref={contactRef}
       id="contact">
       <h2 className="my-5 text-2xl md:text-3xl font-bold">Contact Me!</h2>

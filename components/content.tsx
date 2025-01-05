@@ -10,7 +10,7 @@ import { Contact } from "./contact"
 import { useRotationMultiplierContext } from "@/context/rotationContext"
 
 const Content = () => {
-  const { setSectionName } = useSectionContext()
+  const { sectionName, setSectionName } = useSectionContext()
   const { setRotationMultiplier } = useRotationMultiplierContext()
 
   const homeRef = useRef<HTMLElement | null>(null)
@@ -41,40 +41,15 @@ const Content = () => {
 
   useEffect(() => {
     if (isInViewportHome) {
-      setSectionName((prevName) => {
-        if (prevName !== "") {
-          setRotationMultiplier((prev) => prev + 120)
-        }
-        return ""
-      })
+      setSectionName("")
     } else if (isInViewportAbout) {
-      setSectionName((prevName) => {
-        if (prevName !== "/About") {
-          setRotationMultiplier((prev) => prev + 120)
-        }
-        return "/About"
-      })
+      setSectionName("/About")
     } else if (isInViewportSkills) {
-      setSectionName((prevName) => {
-        if (prevName !== "/Skills") {
-          setRotationMultiplier((prev) => prev + 120)
-        }
-        return "/Skills"
-      })
+      setSectionName("/Skills")
     } else if (isInViewportProjects) {
-      setSectionName((prevName) => {
-        if (prevName !== "/Projects") {
-          setRotationMultiplier((prev) => prev + 120)
-        }
-        return "/Projects"
-      })
+      setSectionName("/Projects")
     } else if (isInViewportContact) {
-      setSectionName((prevName) => {
-        if (prevName !== "/Contact") {
-          setRotationMultiplier((prev) => prev + 120)
-        }
-        return "/Contact"
-      })
+      setSectionName("/Contact")
     }
   }, [
     isInViewportHome,
@@ -83,6 +58,10 @@ const Content = () => {
     isInViewportProjects,
     isInViewportContact,
   ])
+
+  useEffect(() => {
+    setRotationMultiplier((prev) => prev + 120)
+  }, [sectionName])
 
   return (
     <section className="flex flex-col xl:px-0 mx-auto">

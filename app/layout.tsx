@@ -55,7 +55,13 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AhmadBShaik',
+    description: 'Full-Stack Developer & Front-End Specialist',
+    creator: '@AhmadBShaik',
+  },
 };
 
 export default function RootLayout({
@@ -65,9 +71,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="robots" content="noindex, nofollow" />
-      </Head>
       <SectionContextProvider>
         <RotationMultiplierContextProvider>
           <body className={`min-h-screen flex flex-col ${inter.className}`}>
