@@ -18,7 +18,7 @@ export const Hero = ({
       className={`w-full h-screen -mt-16 sm:-mt-20 flex items-center ${sectionName === "/Projects"
         ? "bg-white"
         : "bg-gradient-to-br from-emerald-600 from-20% via-emerald-700 via-50% to-emerald-800 to-90%"
-        }`}
+        } mb-16 sm:mb-20`}
       ref={homeRef}
       id="hero"
     >
