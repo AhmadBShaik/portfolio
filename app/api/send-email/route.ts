@@ -30,15 +30,8 @@ export async function POST(req: Request) {
       </div>`,
       }
 
-      await transporter.sendMail(mailOptions);
-
-      // Return success response
-      const res = NextResponse.json({ message: 'Email sent successfully' });
-      res.headers.set('Access-Control-Allow-Origin', origin);  // Allow the requesting domain
-      res.headers.set('Access-Control-Allow-Methods', 'POST');  // Allow POST requests
-      res.headers.set('Access-Control-Allow-Headers', 'Content-Type');  // Allow Content-Type header
-      return res;
-
+      await transporter.sendMail(mailOptions)
+      return NextResponse.json({ message: "Email sent successfully!" })
     } catch (e) {
       return NextResponse.json({ error: e })
     }
