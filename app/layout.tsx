@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ahmad Basha Shaik (AKA AhmadBShaik)", url: "https://ahmadbshaik.com" }],
   openGraph: {
-    title: "Ahmad Basha Shaik | IT Professional",
+    title: "Ahmad Basha Shaik | Full-Stack Developer",
     description:
       "Skilled Full-Stack Developer with a strong focus on creating seamless and engaging front-end user experiences. Passionate about crafting responsive, high-performance web applications using modern technologies.",
     url: "https://ahmadbshaik.com",
