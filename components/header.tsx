@@ -1,16 +1,16 @@
-"use client"
-import React, { useEffect, useRef, useState } from "react"
-import Image from "next/image"
-import { useSectionContext } from "@/context/sectionContext"
-import { Link } from "react-scroll"
-import { useWindowWidth } from "@/hooks/window-width"
-import { useRotationMultiplierContext } from "@/context/rotationContext"
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { useSectionContext } from "@/context/sectionContext";
+import { Link } from "react-scroll";
+import { useWindowWidth } from "@/hooks/window-width";
+import { useRotationMultiplierContext } from "@/context/rotationContext";
 
 const Header = () => {
-  const windowWidth = useWindowWidth()
+  const windowWidth = useWindowWidth();
 
-  const [isOpen, setOpen] = useState<boolean>(false)
-  const { sectionName } = useSectionContext()
+  const [isOpen, setOpen] = useState<boolean>(false);
+  const { sectionName } = useSectionContext();
 
   const navItems = [
     { name: "Home", to: "hero" },
@@ -18,41 +18,43 @@ const Header = () => {
     { name: "Skills", to: "skills" },
     { name: "Projects", to: "projects" },
     { name: "Contact", to: "contact" },
-  ]
+    { name: "Blog", to: "https://blog.ahmadbshaik.com" },
+  ];
   const { rotationMultiplier, setRotationMultiplier } =
-    useRotationMultiplierContext()
+    useRotationMultiplierContext();
 
   useEffect(() => {
     const handler = setInterval(() => {
       if (sectionName === "") {
-        setRotationMultiplier((prev) => prev + 120)
+        setRotationMultiplier((prev) => prev + 120);
       }
-    }, 2500)
-    return () => clearInterval(handler)
-  })
+    }, 2500);
+    return () => clearInterval(handler);
+  });
   React.useEffect(() => {
     if (sectionName === "") {
-      setRotationMultiplier((prev) => prev + 120)
+      setRotationMultiplier((prev) => prev + 120);
     }
-  }, [sectionName])
+  }, [sectionName]);
 
-  const previousSectionNameRef = useRef<string>("")
+  const previousSectionNameRef = useRef<string>("");
 
   React.useEffect(() => {
     if (
       sectionName === "/About" &&
       previousSectionNameRef.current !== "/Skills"
     ) {
-      setRotationMultiplier((prev) => prev + 120)
+      setRotationMultiplier((prev) => prev + 120);
     }
-    previousSectionNameRef.current = sectionName
-  }, [sectionName])
+    previousSectionNameRef.current = sectionName;
+  }, [sectionName]);
 
   return (
     <header
       className={`w-full ${isOpen ? "h-screen" : "h-16"} ${
         sectionName !== "" ? "border-b border-emerald-700 bg-white" : ""
-      } sm:h-20 fixed text-emerald-700 backdrop-blur-md z-20`}>
+      } sm:h-20 fixed text-emerald-700 backdrop-blur-md z-20`}
+    >
       <div className="flex h-16 sm:h-20 items-center px-5 2xl:px-0 max-w-7xl mx-auto font-bold justify-between">
         <div className="flex items-end">
           <span
@@ -61,7 +63,8 @@ const Header = () => {
             } mr-3 duration-500	`}
             style={{
               rotate: `${rotationMultiplier}deg`,
-            }}>
+            }}
+          >
             <Image src={"/a-white.svg"} alt={""} height={30} width={30} />
           </span>
 
@@ -71,7 +74,8 @@ const Header = () => {
             } mr-3 duration-500`}
             style={{
               rotate: `${rotationMultiplier}deg`,
-            }}>
+            }}
+          >
             <Image src={"/a-emerald.svg"} alt={""} height={30} width={30} />
           </span>
           <div>
@@ -81,20 +85,23 @@ const Header = () => {
               spy={true}
               smooth={true}
               offset={windowWidth < 640 ? -64 : -81}
-              duration={500}>
+              duration={500}
+            >
               <span
                 className={`${
                   sectionName === ""
                     ? "text-white hover:text-emerald-100"
                     : "hover:text-emerald-800 "
-                } text-xl sm:text-2xl xl:text-3xl cursor-pointer`}>
+                } text-xl sm:text-2xl xl:text-3xl cursor-pointer`}
+              >
                 Ahmad B Shaik
               </span>
             </Link>
             <span
               className={`${
                 sectionName === "" ? "text-white" : ""
-              } text-sm sm:text-md xl:text-xl cursor-default`}>
+              } text-sm sm:text-md xl:text-xl cursor-default`}
+            >
               {sectionName}
             </span>
           </div>
@@ -134,14 +141,21 @@ const Header = () => {
                     <li key={item.name}>
                       <Link
                         activeClass="active"
-                        to={item.to}
+                        to={item.to.startsWith("https://") ? "" : item.to}
                         spy={true}
                         smooth={true}
                         offset={windowWidth < 640 ? -64 : -81}
-                        duration={500}>
+                        duration={500}
+                      >
                         <div
                           className="hover:cursor-pointer hover:text-white text-emerald-50 hover:underline p-2.5"
-                          onClick={() => setOpen(false)}>
+                          onClick={() => {
+                            setOpen(false);
+                            if (item.to.startsWith("https://")) {
+                              window.open(item.to);
+                            }
+                          }}
+                        >
                           {item.name}
                         </div>
                       </Link>
@@ -155,23 +169,31 @@ const Header = () => {
         <ul
           className={`${
             sectionName === "" ? "text-white" : "hover:text-emerald-600 "
-          } hidden md:flex space-x-5`}>
+          } hidden md:flex space-x-5`}
+        >
           {navItems.map((item) => (
             <li key={item.name}>
               {
                 <Link
                   activeClass="active"
-                  to={item.to}
+                  to={item.to.startsWith("https://") ? "" : item.to}
+                  onClick={() => {
+                    if (item.to.startsWith("https://")) {
+                      window.open(item.to);
+                    }
+                  }}
                   spy={true}
                   smooth={true}
                   offset={windowWidth < 640 ? -64 : -81}
-                  duration={500}>
+                  duration={500}
+                >
                   <div
                     className={`${
                       sectionName === ""
                         ? "hover:text-emerald-100"
                         : "hover:text-emerald-800"
-                    } hover:underline cursor-pointer`}>
+                    } hover:underline cursor-pointer`}
+                  >
                     {item.name}
                   </div>
                 </Link>
@@ -181,7 +203,7 @@ const Header = () => {
         </ul>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

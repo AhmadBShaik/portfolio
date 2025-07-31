@@ -15,10 +15,11 @@ export const Hero = ({
   });
   return (
     <section
-      className={`w-full h-screen -mt-16 sm:-mt-20 flex items-center ${sectionName === "/Projects"
-        ? "bg-white"
-        : "bg-gradient-to-br from-emerald-600 from-20% via-emerald-700 via-50% to-emerald-800 to-90%"
-        } mb-16 sm:mb-20`}
+      className={`w-full h-screen -mt-16 sm:-mt-20 flex items-center ${
+        sectionName === "/Projects"
+          ? "bg-white"
+          : "bg-gradient-to-br from-emerald-600 from-20% via-emerald-700 via-50% to-emerald-800 to-90%"
+      } mb-16 sm:mb-20`}
       ref={homeRef}
       id="hero"
     >
@@ -108,7 +109,15 @@ export const Hero = ({
                 />
               </a>
             </div>
-            {/* <div className="flex items-center cursor-pointer"><Image src={"/gmail.png"} alt="Gmail" width={52} height={52} title="Email" /></div> */}
+            <div className="flex items-center cursor-pointer">
+              <Image
+                src={"/gmail.png"}
+                alt="Gmail"
+                width={52}
+                height={52}
+                title="Email"
+              />
+            </div>
             <div className="flex items-center cursor-pointer">
               <a href="https://github.com/ahmadbshaik" target="_blank">
                 <Image
@@ -120,17 +129,17 @@ export const Hero = ({
                 />
               </a>
             </div>
-            <div className="flex items-center cursor-pointer">
+            {/* <div className="flex items-center cursor-pointer">
               <a href="mailto:ahmadbshaik@outlook.com" target="_blank">
                 <Image
                   src={"/outlook.png"}
-                  alt="GitHub"
+                  alt="Outlook"
                   width={44}
                   height={44}
-                  title="GitHub"
+                  title="Outlook"
                 />
               </a>
-            </div>
+            </div> */}
             <div className="flex items-center cursor-pointer">
               <a
                 className="px-5 rounded w-fit py-1.5 bg-emerald-700 hover:bg-emerald-800 text-teal-200 cursor-pointer font-bold"
