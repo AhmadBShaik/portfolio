@@ -72,10 +72,10 @@ export const Hero = ({
               </a>
             </div>
             <div className="flex items-center cursor-pointer">
-              <a href="mailto:ahmadbshaik@outlook.com" target="_blank">
+              <a href="mailto:ahmad.sb1106@gmail.com" target="_blank">
                 <Image
-                  src={"/outlook.png"}
-                  alt="Email"
+                  src={"/gmail.png"}
+                  alt="Gmail"
                   width={36}
                   height={36}
                   title="Email"
@@ -110,15 +110,6 @@ export const Hero = ({
               </a>
             </div>
             <div className="flex items-center cursor-pointer">
-              <Image
-                src={"/gmail.png"}
-                alt="Gmail"
-                width={52}
-                height={52}
-                title="Email"
-              />
-            </div>
-            <div className="flex items-center cursor-pointer">
               <a href="https://github.com/ahmadbshaik" target="_blank">
                 <Image
                   src={"/github.png"}
@@ -129,17 +120,17 @@ export const Hero = ({
                 />
               </a>
             </div>
-            {/* <div className="flex items-center cursor-pointer">
-              <a href="mailto:ahmadbshaik@outlook.com" target="_blank">
+            <div className="flex items-center cursor-pointer">
+              <a href="mailto:ahmad.sb1106@gmail.com" target="_blank">
                 <Image
-                  src={"/outlook.png"}
-                  alt="Outlook"
-                  width={44}
-                  height={44}
-                  title="Outlook"
+                  src={"/gmail.png"}
+                  alt="Gmail"
+                  width={52}
+                  height={52}
+                  title="Email"
                 />
               </a>
-            </div> */}
+            </div>
             <div className="flex items-center cursor-pointer">
               <a
                 className="px-5 rounded w-fit py-1.5 bg-emerald-700 hover:bg-emerald-800 text-teal-200 cursor-pointer font-bold"
