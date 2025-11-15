@@ -1,13 +1,20 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios from "axios"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplateNoReload,
+  validateCaptcha
+} from "react-simple-captcha";
+
 
 const contactFormData = z.object({
   name: z.string().min(3),
   email: z.string().email(),
-  message: z.string().min(20),
+  message: z.string().min(10),
+  captcha: z.string().length(6)
 })
 
 type ContactFormData = z.infer<typeof contactFormData>
@@ -28,8 +35,32 @@ export const Contact = ({
 
   const [loading, setLoading] = useState<boolean>(false)
   const [emailSent, setEmailSent] = useState<boolean>(false)
+  // const [captcha, setCaptcha] = useState<string>('')
+
+    const refresh = () => {
+    loadCaptchaEnginge(6); 
+  };
+
+  useEffect(() => {
+    refresh();
+  }, []);
+
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const userInput = document.getElementById("captcha_input").value;
+
+  //   if (validateCaptcha(userInput)) {
+  //     alert("Captcha matched!");
+  //   } else {
+  //     alert("Captcha does not match!");
+  //   }
+  // };
 
   const sendEmail = async (data: ContactFormData) => {
+    if(!validateCaptcha(data.captcha)){
+      return;
+    }
     try {
       setLoading(true)
       const emailResponse = await axios.post(`/api/send-email`, data)
@@ -92,6 +123,16 @@ export const Contact = ({
                 {!!errors?.message ? errors.message.message : null}
               </div>
             </div>
+            <div className="flex gap-4 items-center">
+            <LoadCanvasTemplateNoReload />
+            <button onClick={refresh} type="button" className="text-emerald-600 font-bold">Reload captcha</button>
+            </div>
+            <input 
+             className={`w-full text-sm md:text-base p-2.5 rounded outline-none border ${!!errors?.email ? "border-red-500" : "border-emerald-500"
+                  } focus:border-2`}
+                  placeholder="Enter Captcha"
+                {...register("captcha")}
+                  />
             <input
               type="submit"
               className={`w-full text-sm md:text-base p-2.5 rounded text-white font-bold ${loading

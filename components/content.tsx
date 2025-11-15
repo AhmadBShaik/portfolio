@@ -8,6 +8,7 @@ import { Skills } from "./skills";
 import { Projects } from "./projects";
 // import { Contact } from "./contact";
 import { useRotationMultiplierContext } from "@/context/rotationContext";
+import { Contact } from "./contact";
 
 const Content = () => {
   const { sectionName, setSectionName } = useSectionContext();
@@ -17,7 +18,7 @@ const Content = () => {
   const aboutRef = useRef<HTMLElement | null>(null);
   const skillsRef = useRef<HTMLElement | null>(null);
   const projectsRef = useRef<HTMLElement | null>(null);
-  // const contactRef = useRef<HTMLElement | null>(null);
+  const contactRef = useRef<HTMLElement | null>(null);
 
   const isInViewportHome = useIsInViewport(
     homeRef as React.MutableRefObject<HTMLElement>
@@ -35,9 +36,9 @@ const Content = () => {
     projectsRef as React.MutableRefObject<HTMLElement>
   );
 
-  // const isInViewportContact = useIsInViewport(
-  //   contactRef as React.MutableRefObject<HTMLElement>
-  // );
+  const isInViewportContact = useIsInViewport(
+    contactRef as React.MutableRefObject<HTMLElement>
+  );
 
   useEffect(() => {
     if (isInViewportHome) {
@@ -70,7 +71,7 @@ const Content = () => {
       <AboutMe aboutRef={aboutRef} />
       <Skills skillsRef={skillsRef} />
       <Projects projectsRef={projectsRef} />
-      {/* <Contact contactRef={contactRef} /> */}
+      <Contact contactRef={contactRef} />
     </section>
   );
 };
