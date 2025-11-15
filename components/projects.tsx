@@ -34,22 +34,22 @@ export const Projects = ({
       viewLive: "#",
       noRedirect: true,
     },
-    {
-      title: "Happy Travel",
-      description:
-        "Developed a travel website enabling users to discover destinations, view recent photographs of current scenery, and stay updated with the latest travel news.",
-      image: '/projects/happy-travel.png',
-      sourceCode: "https://github.com/AhmadBShaik/happy-travel",
-      viewLive: "https://ahmadbshaik.github.io/happy-travel/",
-    },
-    {
-      title: "Botanical Garden",
-      description:
-        "Developed a fully responsive static website with a custom mobile menu using Tailwind CSS utility classes.",
-      image: '/projects/botanical-garden.png',
-      sourceCode: "https://github.com/ahmad-bsh/botanical-garden",
-      viewLive: "https://botanical-garden-plum.vercel.app/",
-    },
+    // {
+    //   title: "Happy Travel",
+    //   description:
+    //     "Developed a travel website enabling users to discover destinations, view recent photographs of current scenery, and stay updated with the latest travel news.",
+    //   image: '/projects/happy-travel.png',
+    //   sourceCode: "https://github.com/AhmadBShaik/happy-travel",
+    //   viewLive: "https://ahmadbshaik.github.io/happy-travel/",
+    // },
+    // {
+    //   title: "Botanical Garden",
+    //   description:
+    //     "Developed a fully responsive static website with a custom mobile menu using Tailwind CSS utility classes.",
+    //   image: '/projects/botanical-garden.png',
+    //   sourceCode: "https://github.com/ahmad-bsh/botanical-garden",
+    //   viewLive: "https://botanical-garden-plum.vercel.app/",
+    // },
   ]
   return (
     <section
