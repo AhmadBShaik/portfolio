@@ -12,6 +12,7 @@ export const Skills = ({
     { name: "JavaScript", image: "/javascript.png" },
     { name: "React Query", image: "/react-query.png" },
     { name: "Tailwind.css", image: "/tailwind.png" },
+    { name: "PostgreSQL", image: "/postgresql.png" },
     { name: "Supabase", image: "/supabase.png" },
     { name: "HTML", image: "/html.png" },
     { name: "CSS", image: "/css.png" },
@@ -40,7 +41,7 @@ export const Skills = ({
       id="skills">
       <h2 className="my-5 text-2xl md:text-3xl font-bold">Skills</h2>
 
-      <div className="mt-5 mb-5 md:text-lg font-bold">I am confident with</div>
+      {/* <div className="mt-5 mb-5 md:text-lg font-bold">I am confident with</div> */}
       <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3 text-sm md:text-base">
         {confidentWith.map((item) => (
           <li key={item.name}>
@@ -54,7 +55,7 @@ export const Skills = ({
         ))}
       </ul>
 
-      <div className="mt-10 mb-5 md:text-lg font-bold">I have used in past</div>
+      {/* <div className="mt-10 mb-5 md:text-lg font-bold">I have used in past</div>
       <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3 text-sm md:text-base">
         {usedInPast.map((item) => (
           <li key={item.name}>
@@ -66,9 +67,9 @@ export const Skills = ({
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
 
-      <div className="mt-10 mb-5 md:text-lg font-bold">
+      {/* <div className="mt-10 mb-5 md:text-lg font-bold">
         I want to learn/gain expertise in near future
       </div>
       <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3 text-sm md:text-base">
@@ -82,7 +83,7 @@ export const Skills = ({
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </section>
   )
 }
