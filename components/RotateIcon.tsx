@@ -17,6 +17,7 @@ const RotatingIcon = ({ onClickCallback }:{onClickCallback: () => void}) => {
       viewBox="0 0 24 24"
       onClick={handleClick}
       style={{
+        userSelect:'none',
         cursor: "pointer",
         transition: "transform 0.3s ease",
         transform: `rotate(${rotation}deg)`
